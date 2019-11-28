@@ -157,8 +157,3 @@ int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
 
 这个题目思路上还是很直接的，关键一点在于预处理，也就是提前将每个单词所有可能的下一步转换计算出来，这将大大减少问题的搜索规模，因此这个题目的难点在于优化，实际上上述建立索引的过程还不是最优的，你能对其进一步优化吗？
 
-
-
-
-
-<https://www.zhihu.com/question/35010548/answer/291647493> 微信公众号的广告投放应该如何实施？
