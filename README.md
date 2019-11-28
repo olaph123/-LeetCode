@@ -6,4 +6,4 @@
 
 | 序号 | 题目                                             | Graph                                                       |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1    | [两数之和](https://github.com/olaph123/md/blob/master/%E5%85%AC%E4%BC%97%E5%8F%B7/10_%E4%B8%80%E9%81%93%E5%86%B3%E5%AE%9A%E9%9D%A2%E8%AF%95%E6%88%90%E8%B4%A5%E7%9A%84%E7%AE%97%E6%B3%95%E9%A2%98.md) | ![](https://github.com/olaph123/md/blob/master/%E5%9B%BE%E7%89%87/1574759446030.png) |
+| 1    | [单词梯子](https://github.com/olaph123/leetcode/blob/master/leetcode/%E5%9B%BE%E8%A7%A3LeetCode%EF%BC%9A%E5%8D%95%E8%AF%8D%E6%A2%AF%E5%AD%90.md) | ![](https://github.com/olaph123/md/blob/master/%E5%9B%BE%E7%89%87/1574759446030.png) |
