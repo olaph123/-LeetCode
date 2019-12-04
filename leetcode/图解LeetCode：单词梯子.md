@@ -17,19 +17,19 @@
 
 很简单，如果你一下想不到该怎么找出一条可能的路径，**那么我们就从简单的第一步开始**，我们还是以本文开始示例来讲解，hit下一步转换后的单词一定出自单词列表(如果没有的话那么说明根本不存在这样一条转换路径，直接返回0就可以了)，如图所示：
 
-![1574766791602](./misc/ph/1574766791602.png)
+![1574766791602](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGtf2HwzayuMDG8BGExlZ0CgKRsKR4nqqhRnDNDWLnnaus2hLOz0Jag8Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
 但是，根据题目要求hit的下一步不能是dot、dog、lot、log以及cog，因为题目要求一次只能转换一个字符，因此从hit开始的下一步只能是hot，如图所以：
 
-![1574759446030](./misc/ph/1574759446030.png)
+![1574759446030](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGt1RwoXP3YL3TiaYiaazn4LvKj97j0fX0sva8PXjvyfa4W2Az5OvznOgyg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
 这样我们就来到了hot，同样的道理我们知道hot的下一步有两种可能，分别是dot和lot，如图所示：
 
-![1574759501927](./misc/ph/1574759501927.png)
+![1574759501927](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGtVCvdbfPxUdykdMBejFGCx2KOj5wcfXClNog2Y2buR6UvzCtwqLG37Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
@@ -55,29 +55,29 @@ cog : dog,log
 
 这样上述从hit到hot以及到{dot、lot}的搜索过程就如图所示了：
 
-![1574759554739](./misc/ph/1574759554739.png)
+![1574759554739](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGtES0x2SDZz3e1zs1TR6Kj0pLu3dTmSxDfbb4ibne9mYLT8wC5vJh4SVQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
 接下来我们来到了dot节点，通过提前建立的索引我们知道，dot的所有可能的下一转换单词是：hot,dog,lot，但是不要忘了其中的hot和lot是已经出现在之前的搜索路径中了，因此我们需要排除掉hot和lot，如图所示：
 
-![1574759594357](./misc/ph/1574759594357.png)
+![1574759594357](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGtWzic1MPaG9JoUSNQAYJ0UYV1r2rl9iavU9vI5n9JgNaHIRWcRnN4EU6Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
 接着让我们处理lot，从索引中知道lot的下一个转换单词是hot、dot、log，基于同样的道理我们应该排除掉hot和dot，因为这两个单词已经出现在搜索路径中了，这样我们得到了下图：
 
-![1574759631841](./misc/ph/1574759631841.png)
+![1574759631841](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGtGX3IjDhhSHDeXsRPDfckr5mmRC5I9HGRGKT9dV04LCXmDRkFGYzmUw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 接下来我们来到了dog，从索引中知道dog的下一个转换单词是dot、log、cog，其中dot和log应该排除掉，同样因为之前已经出现过了，然后就是cog，Bingo，cog就是我们要找的结尾单词，如图所示：
 
-![1574759660313](./misc/ph/1574759660313.png)
+![1574759660313](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGtwRYc5nzgyouoNvnEkZ1ksKialMVVWEMecia2Q0DEib98XgibgH70bkdjTg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
 就这样我们找到了一条可行的路径，而且这条路径就是最短的，这是很显然的，因为我们是按照层的顺序来搜索的，因此只要能找到一条路径，那么就一定是最短的，这个最短路径就是"hit" -> "hot" -> "dot" -> "dog" -> "cog"，如图所示：
 
-![1574759701629](./misc/ph/1574759701629.png)
+![1574759701629](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya1tL1ew6tDxbXCzWybuApGtSkey11c8oTGdWn39Tqxr4MXrvp1D9XXqjCNdwxlY25R7hww8ZuwR3A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
