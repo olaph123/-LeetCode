@@ -2,7 +2,7 @@
 
 这个题目的要求非常简单，求出给定两个二叉树节点的公共祖先，如下所示的二叉树，那么节点5和节点1的3，我们该怎样解决这个问题呢？
 
-![1574150602392](../../md/图片/640-1575465458839.webp)
+![1574150602392](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya2qIl46ic2dicibQLuLDZHPunjopKWk5oD5bhE9SHiaE5QVaicNe3RlBTic6p4VIkDRCeXwm3w0o1O4OgQg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
@@ -21,7 +21,7 @@
 
 那么很显然节点6和节点7的所有祖先节点从5开始就一样了，因此节点5就是最低公共节点，如图所示：
 
-![1574152559177](../../md/图片/640-1575465471789.webp)
+![1574152559177](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya2qIl46ic2dicibQLuLDZHPunjs0ouGVpE6u2d3wRSz2vWZibodW3Fb4nndbauVIJmBL0VCqYUsUo5dJg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 
 
