@@ -48,7 +48,7 @@ Interleaving 从字面上讲是交错交叉的意思，给定两个字符串s1:"
 
 让我们再仔细的看一下这个题目，s3字符串是由s1和s2形成的，对于s3中的一个字符**要么来自s1要么来自s2**，这对我们来说有什么启示呢？  通过下图你就明白了：
 
-![1573456928583](../图片/1573456928583.png)
+![1573456928583](https://mmbiz.qpic.cn/mmbiz_png/8g3rwJPmya2obhO3ASlcnsfgAhcev5sicMQqPibx8GA8eEn8ib5RibeicEC2ffLuvITDrgXGgu8VicItgMfxqgxefkyw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 对于s1:"ab", s2:"ac", s3:"aabc"来说，s3的第一个字符a既可以来自于s1也可以来自于s2，只有两种选择，无论选择哪一个我们都会得到一个**新的子问题**，因此我们需要进一步求解这个子问题，在这里我们使用f(i,j)来表示以s1的第i个位置到末尾形成的字符串和s2的第j个位置到末尾形成的字符串能否组合出s3从i+j到末尾形成的字符串。
 
